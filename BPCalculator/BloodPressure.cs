@@ -11,7 +11,7 @@ namespace BPCalculator
         [Display(Name="Pre-High Blood Pressure")] PreHigh,
         [Display(Name ="High Blood Pressure")]  High
     };
-
+    
     public class BloodPressure
     {
         public const int SystolicMin = 70;
@@ -28,12 +28,6 @@ namespace BPCalculator
         // calculate BP category
         public BPCategory Category
         {
-            /*get
-            {
-                // implement as part of project
-                throw new NotImplementedException("not implemented yet");
-            }
-*/
             get
             {
                 if (Diastolic <= 60.0 && Systolic <= 90)
@@ -56,9 +50,10 @@ namespace BPCalculator
                     return BPCategory.High;
                 }
                 {
-                    throw new Exception("Invalid value");
+                    throw new Exception("Input value is invalid");
                 }
             }
         }
+        
     }
 }
