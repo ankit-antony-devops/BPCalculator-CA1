@@ -11,6 +11,14 @@ namespace BPCalculator
         [Display(Name="Pre-High Blood Pressure")] PreHigh,
         [Display(Name ="High Blood Pressure")]  High
     };
+
+    public enum BPSuggestedTreatment
+    {
+        [Display(Name = "Eat More Salt")] Low,
+        [Display(Name = "Keep up the healthy lifestyle")] Normal,
+        [Display(Name = "Time to ease back on the booze and cigarettes")] PreHigh,
+        [Display(Name = "Time to visit the GP for a checkup")] High
+    };
     
     public class BloodPressure
     {
@@ -55,5 +63,24 @@ namespace BPCalculator
             }
         }
         
+        public BPSuggestedTreatment SuggestedTreatment
+        {
+            get
+            {
+                switch (Category)
+                {
+                    case BPCategory.Low:
+                        return BPSuggestedTreatment.Low;
+                    case BPCategory.High:
+                        return BPSuggestedTreatment.High;
+                    case BPCategory.Ideal:
+                        return BPSuggestedTreatment.Normal;
+                    case BPCategory.PreHigh:
+                        return BPSuggestedTreatment.PreHigh;
+                    default:
+                        throw new Exception("Invalid range");
+                }
+            }
+        }
     }
 }
