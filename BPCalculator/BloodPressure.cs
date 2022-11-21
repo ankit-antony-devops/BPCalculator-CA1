@@ -12,12 +12,12 @@ namespace BPCalculator
         [Display(Name ="High Blood Pressure")]  High
     };
 
-    public enum BPSuggestedTreatment
+    public enum BPSuggestTreatment
     {
-        [Display(Name = "Eat More Salt")] Low,
-        [Display(Name = "Keep up the healthy lifestyle")] Normal,
-        [Display(Name = "Time to ease back on the booze and cigarettes")] PreHigh,
-        [Display(Name = "Time to visit the GP for a checkup")] High
+        [Display(Name = "Use more salt\n, Drink more water\n, Wear compression stockings\n, Medications")] Low,
+        [Display(Name = "Proud to be healthy!")] Ideal,
+        [Display(Name = "Excercise daily\n, Make healthy food choices")] PreHigh,
+        [Display(Name = "Please visit your nearest GP for a body checkup\n Doctor365: 0818000365")] High
     };
     
     public class BloodPressure
@@ -38,22 +38,22 @@ namespace BPCalculator
         {
             get
             {
-                if (Diastolic <= 60.0 && Systolic <= 90)
+                if (Diastolic <= 60 && Systolic <= 90)
                 {
                     return BPCategory.Low;
                 }
 
-                else if (Diastolic <= 80.0 && Systolic <= 120.0)
+                else if (Diastolic <= 80 && Systolic <= 120)
                 {
                     return BPCategory.Ideal;
                 }
 
-                else if (Diastolic <= 90.0 && Systolic <= 140.0)
+                else if (Diastolic <= 90 && Systolic <= 140)
                 {
                     return BPCategory.PreHigh;
                 }
 
-                else if (Diastolic <= 100.0 && Systolic <= 190.0)
+                else if (Diastolic <= 100 && Systolic <= 190)
                 {
                     return BPCategory.High;
                 }
@@ -63,20 +63,20 @@ namespace BPCalculator
             }
         }
         
-        public BPSuggestedTreatment SuggestedTreatment
+        public BPSuggestTreatment SuggestTreatment
         {
             get
             {
                 switch (Category)
                 {
                     case BPCategory.Low:
-                        return BPSuggestedTreatment.Low;
+                        return BPSuggestTreatment.Low;
                     case BPCategory.High:
-                        return BPSuggestedTreatment.High;
+                        return BPSuggestTreatment.High;
                     case BPCategory.Ideal:
-                        return BPSuggestedTreatment.Normal;
+                        return BPSuggestTreatment.Ideal;
                     case BPCategory.PreHigh:
-                        return BPSuggestedTreatment.PreHigh;
+                        return BPSuggestTreatment.PreHigh;
                     default:
                         throw new Exception("Invalid range");
                 }
