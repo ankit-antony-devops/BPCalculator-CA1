@@ -55,7 +55,7 @@ namespace BPCalculator
                     return BPCategory.High;
                 }
                 {
-                    throw new Exception("Input value is invalid");
+                    throw new Exception("Input value is not valid");
                 }
             }
         }
