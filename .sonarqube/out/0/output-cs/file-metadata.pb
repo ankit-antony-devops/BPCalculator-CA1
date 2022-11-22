@@ -1,0 +1,10 @@
+H
+?C:\Users\EANTANK\source\repos\bp2\BPCalculator\BloodPressure.csutf-8M
+DC:\Users\EANTANK\source\repos\bp2\BPCalculator\Pages\Error.cshtml.csutf-8M
+DC:\Users\EANTANK\source\repos\bp2\BPCalculator\Pages\Index.cshtml.csutf-8O
+FC:\Users\EANTANK\source\repos\bp2\BPCalculator\Pages\Privacy.cshtml.csutf-8B
+9C:\Users\EANTANK\source\repos\bp2\BPCalculator\Program.csutf-8B
+9C:\Users\EANTANK\source\repos\bp2\BPCalculator\Startup.csutf-8€
+uC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.csutf-8n
+cC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\BPCalculator.AssemblyInfo.csutf-8s
+hC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\BPCalculator.RazorAssemblyInfo.csutf-8

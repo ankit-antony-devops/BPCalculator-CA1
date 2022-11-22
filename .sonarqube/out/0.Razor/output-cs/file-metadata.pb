@@ -1,0 +1,9 @@
+o
+dC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.csutf-8o
+dC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.csutf-8q
+fC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.csutf-8x
+mC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.csutf-8Š
+C:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.csutf-8v
+kC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.csutf-8t
+iC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.csutf-8y
+nC:\Users\EANTANK\source\repos\bp2\BPCalculator\obj\Debug\netcoreapp3.1\BPCalculator.RazorTargetAssemblyInfo.csutf-8
