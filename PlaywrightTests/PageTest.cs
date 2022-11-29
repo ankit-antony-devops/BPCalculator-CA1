@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 namespace PlaywrightTests;
 
 [TestClass]
-public class UnitTest1 : PageTest
+public class PageTest : PageTest
 {
     [TestMethod]
     public async Task ShouldHaveTheCorrectSlogan()
