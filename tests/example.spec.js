@@ -5,7 +5,7 @@ test('homepage has title and links to intro page', async ({ page }) => {
   await page.goto('https://bpcalc-csd1.azurewebsites.net/');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  await expect(page).toHaveTitle(/BP Category Calculator - BPCalculator/);
 
   // create a locator
   const getStarted = page.getByRole('link', { name: 'Privacy' });
