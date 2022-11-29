@@ -6,10 +6,10 @@ namespace BPCalculator
     // BP categories
     public enum BPCategory
     {
-        [Display(Name="Low Blood Pressure")] Low,
-        [Display(Name="Ideal Blood Pressure")]  Ideal,
-        [Display(Name="Pre-High Blood Pressure")] PreHigh,
-        [Display(Name ="High Blood Pressure")]  High
+        [Display(Name="Low Blood pressure")] Low,
+        [Display(Name="Ideal Blood pressure")]  Ideal,
+        [Display(Name="Pre-High Blood pressure")] PreHigh,
+        [Display(Name ="High Blood pressure")]  High
     };
 
     public enum BPSuggestTreatment
