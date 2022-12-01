@@ -5,31 +5,31 @@ namespace BPCalc.Unit.Tests
     public class BPCalcUnitTests
     {
         [Fact]
-        public void TestIfBPLow()
+        public void TestIfBPIsLow()
         {
-            BloodPressure bloodPressure = new() { Diastolic = 50, Systolic = 79 };
-            Assert.Equal(BPCategory.Low, bloodPressure.Category);
+            BloodPressure bp = new() { Diastolic = 51, Systolic = 87 };
+            Assert.Equal(BPCategory.Low, bp.Category);
         }
 
         [Fact]
-        public void TestIfBPIdeal()
+        public void TestIfBPIsIdeal()
         {
-            BloodPressure bloodPressure = new() { Diastolic = 75, Systolic = 100 };
-            Assert.Equal(BPCategory.Ideal, bloodPressure.Category);
+            BloodPressure bp = new() { Diastolic = 65, Systolic = 110 };
+            Assert.Equal(BPCategory.Ideal, bp.Category);
         }
 
         [Fact]
-        public void TestIfBPPreHigh()
+        public void TestIfBPIsPreHigh()
         {
-            BloodPressure bloodPressure = new() { Diastolic = 86, Systolic = 138 };
-            Assert.Equal(BPCategory.PreHigh, bloodPressure.Category);
+            BloodPressure bp = new() { Diastolic = 88, Systolic = 127 };
+            Assert.Equal(BPCategory.PreHigh, bp.Category);
         }
 
         [Fact]
-        public void TestIfBPHigh()
+        public void TestIfBPIsHigh()
         {
-            BloodPressure bloodPressure = new() { Diastolic = 92, Systolic = 159 };
-            Assert.Equal(BPCategory.High, bloodPressure.Category);
+            BloodPressure bp = new() { Diastolic = 94, Systolic = 146 };
+            Assert.Equal(BPCategory.High, bp.Category);
         }
 
     }
