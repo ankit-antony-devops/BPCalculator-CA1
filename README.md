@@ -13,3 +13,7 @@ Blood Pressure Calculator using ASP.Net Core
 [![CODE ANALYSIS - SONARCLOUD](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/code_analysis_sonarcloud.yml/badge.svg)](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/code_analysis_sonarcloud.yml)
 
 [![E2E TESTS - PLAYWRIGHT](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/e2e_tests_playwright.yml/badge.svg)](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/e2e_tests_playwright.yml)
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=ankit-antony-devops_BPCalculator-CA1)](https://sonarcloud.io/summary/new_code?id=ankit-antony-devops_BPCalculator-CA1)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ankit-antony-devops_BPCalculator-CA1&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ankit-antony-devops_BPCalculator-CA1)
