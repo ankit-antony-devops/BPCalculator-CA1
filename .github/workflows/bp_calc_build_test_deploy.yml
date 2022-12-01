@@ -49,6 +49,13 @@ jobs:
          path: "**/test-results.trx"                            
          reporter: dotnet-trx
          fail-on-error: true
+         
+      - name: NDepend
+        uses: ndepend/ndepend-action@v1
+        with:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+         license: ${{ secrets.NDependLicense }}
+         stopIfQGFailed: true
           
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
