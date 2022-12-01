@@ -38,14 +38,14 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release
         
-      - name: Test
+      - name: Unit Tests
         run: dotnet test --configuration Release --logger "trx;LogFileName=test-results.trx" || true
 
-      - name: Test Report
+      - name: Unit Tests Report
         uses: dorny/test-reporter@v1
         if: always()
         with:
-         name: DotNET Tests
+         name: BP Calculator - Unit Tests
          path: "**/test-results.trx"                            
          reporter: dotnet-trx
          fail-on-error: true
