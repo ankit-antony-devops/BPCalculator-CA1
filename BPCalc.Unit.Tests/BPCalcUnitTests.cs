@@ -7,7 +7,7 @@ namespace BPCalc.Unit.Tests
         [Fact]
         public void TestIfBPIsLow()
         {
-            BloodPressure bp = new() { Diastolic = 51, Systolic = 87 };
+            BloodPressure bp = new() { Diastolic = 52, Systolic = 87 };
             Assert.Equal(BPCategory.Low, bp.Category);
         }
 
