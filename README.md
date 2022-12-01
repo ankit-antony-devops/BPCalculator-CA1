@@ -1,6 +1,11 @@
 # Blood Pressure Calculator
-Blood Pressure Calculator for CA1
-ASP.Net Core
+# MSc Devops - Continuous Software Delivery
+## Continious Assessment (CA) 1
+
+| Name | Student ID | Email Address |
+| ---- | ---------- | ------------- |
+| Ankit Antony | x00193216 | x00193216@mytudublin.ie |
+Blood Pressure Calculator using ASP.Net Core
 
 [![BUILD, TEST AND DEPLOY BP CALCULATOR](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/bp_calc_build_test_deploy.yml/badge.svg)](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/bp_calc_build_test_deploy.yml)
 
