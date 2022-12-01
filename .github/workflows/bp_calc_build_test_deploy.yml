@@ -47,7 +47,10 @@ jobs:
          path: "**/test-results.trx"                            
          reporter: dotnet-trx
          fail-on-error: true
-        
+         id-token: write
+         contents: read
+         checks: write
+          
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
@@ -57,7 +60,6 @@ jobs:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
         
-
   deploy:
     permissions:
       contents: none
