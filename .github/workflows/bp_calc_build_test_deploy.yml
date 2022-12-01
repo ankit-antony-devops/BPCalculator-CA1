@@ -34,10 +34,10 @@ jobs:
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           restore-keys: |
             ${{ runner.os }}-nuget-
-            
-      - name: Collect Workflow Telemetry
-        uses: runforesight/workflow-telemetry-action@v1
-        
+                        
+      - name: Workflow Telemetry
+        uses: runforesight/workflow-telemetry-action@v1.8.0
+
       - name: Build
         run: dotnet build --configuration Release
         
