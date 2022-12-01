@@ -20,3 +20,6 @@ Code Analysis using Sonarcloud:
 
 End-to-end Testing using Playwright: 
 [![E2E TESTS - PLAYWRIGHT](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/e2e_tests_playwright.yml/badge.svg)](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/e2e_tests_playwright.yml)
+
+CodeQL: Vulnerability Check 
+[![CodeQL](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/codeql.yml/badge.svg)](https://github.com/ankit-antony-devops/BPCalculator-CA1/actions/workflows/codeql.yml)
