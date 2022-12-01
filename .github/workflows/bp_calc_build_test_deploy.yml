@@ -81,8 +81,3 @@ jobs:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.BP_CALC_KEY }}
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-          
-      - name: ZAP Scan
-        uses: zaproxy/action-full-scan@v0.4.0
-        with:
-         target: 'https://bpcalc-csd1.azurewebsites.net/'
