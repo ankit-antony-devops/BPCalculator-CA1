@@ -18,7 +18,7 @@ Blood Pressure Calculator using ASP.Net Core
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ankit-antony-devops_BPCalculator-CA1&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ankit-antony-devops_BPCalculator-CA1)
 
-[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=metamug_mason&metric=alert_status)](https://sonarcloud.io/dashboard?id=metamug_mason) 
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=ankit-antony-devops_BPCalculator-CA1&metric=alert_status)](https://sonarcloud.io/dashboard?id=ankit-antony-devops_BPCalculator-CA1) 
 
 [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=ankit-antony-devops_BPCalculator-CA1&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=ankit-antony-devops_BPCalculator-CA1)
 
