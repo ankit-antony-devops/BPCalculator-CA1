@@ -65,7 +65,7 @@ jobs:
          stopIfQGFailed: true
      
   E2E_Tests:
-    name: E2E Tests using Playwright
+    name: E2E Tests (Playwright)
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -87,7 +87,7 @@ jobs:
         retention-days: 30
   
   Code_Analysis:
-    name: Code Analysis using SonarCloud
+    name: Code Analysis (SonarCloud)
     runs-on: windows-latest
     steps:
       - name: Set up JDK 11
