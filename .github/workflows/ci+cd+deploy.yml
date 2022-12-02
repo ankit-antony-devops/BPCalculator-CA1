@@ -16,7 +16,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  build_and_test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -45,10 +45,13 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
-      
+   
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
       - name: Unit Tests
         run: dotnet test --configuration Release --logger "trx;LogFileName=test-results.trx" || true
-        
       - name: Unit Tests Report
         uses: dorny/test-reporter@v1
         if: always()
@@ -57,7 +60,11 @@ jobs:
          path: "**/test-results.trx"                            
          reporter: dotnet-trx
          fail-on-error: true
-         
+  
+  code_analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
       - name: NDepend
         uses: ndepend/ndepend-action@v1
         with:
@@ -92,7 +99,7 @@ jobs:
       contents: none
     runs-on: ubuntu-latest
     if: github.event.ref == 'refs/heads/main'
-    needs: [build_and_test, e2e_tests]
+    needs: [build, test, ]
     environment:
       name: 'Development'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }} #'https://bpcalc-csd1-dev.azurewebsites.net'
@@ -117,7 +124,7 @@ jobs:
       contents: none
     runs-on: ubuntu-latest
     if: github.event.ref == 'refs/heads/main'
-    needs: [DeployDev]
+    needs: [code_analysis, e2e_tests, DeployDev]
     environment:
       name: 'Staging'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }} #https://bpcalc-csd1-staging.azurewebsites.net
