@@ -73,7 +73,7 @@ jobs:
     needs: build_test
     environment:
       name: 'Development'
-      url: 'https://bpcalc-csd1-dev.azurewebsites.net'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }} #'https://bpcalc-csd1-dev.azurewebsites.net'
 
     steps:
       - name: Download artifact from build job
