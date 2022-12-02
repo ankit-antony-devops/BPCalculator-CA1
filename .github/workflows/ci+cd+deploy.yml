@@ -17,6 +17,7 @@ permissions:
 
 jobs:
   Build:
+    name: Build Web App
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -42,6 +43,7 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/myapp
    
   Unit_Tests:
+    name: Unit Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -63,6 +65,7 @@ jobs:
          stopIfQGFailed: true
      
   E2E_Tests:
+    name: E2E Tests using Playwright
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -84,7 +87,7 @@ jobs:
         retention-days: 30
   
   Code_Analysis:
-    name: Build and analyze code
+    name: Code Analysis using SonarCloud
     runs-on: windows-latest
     steps:
       - name: Set up JDK 11
