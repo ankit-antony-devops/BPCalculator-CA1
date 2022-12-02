@@ -57,6 +57,12 @@ jobs:
          path: "**/test-results.trx"                            
          reporter: dotnet-trx
          fail-on-error: true
+  
+  NDepend:
+    name: ndepend
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
       - name: NDepend
         uses: ndepend/ndepend-action@ndependv1.0
         with:
