@@ -61,7 +61,7 @@ jobs:
          reporter: dotnet-trx
          fail-on-error: true
       - name: NDepend
-        uses: ndepend/ndepend-action@v1
+        uses: ndepend/ndepend-action@ndependv1.0
         with:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
          license: ${{ secrets.NDependLicense }}
