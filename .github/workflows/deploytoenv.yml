@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Staging
-      url: 'http://test.myapp.com'
+      url: 'https://bpcalc-csd1-staging.azurewebsites.net'
     steps:
       - name: Deploy
         run: echo I am deploying! 
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Production
-      url: 'http://www.myapp.com'
+      url: 'https://bpcalc-csd1.azurewebsites.net'
     steps:
       - name: Deploy
         run: echo I am deploying! 
