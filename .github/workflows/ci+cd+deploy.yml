@@ -77,6 +77,30 @@ jobs:
     steps:
       - name: Deploy
         run: echo I am deploying! 
+  
+  Deploytodev:  
+    permissions:
+      contents: none
+    runs-on: ubuntu-latest
+    if: github.event.ref == 'refs/heads/main'
+    needs: build_test
+    environment:
+      name: 'Development'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }} #'https://bpcalc-csd1-dev.azurewebsites.net'
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v3
+        with:
+          name: .net-app
+
+      - name: Deploy to Azure Web App - Development
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.BP_CALC_DEV_KEY }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
   DeployStaging:
     name: Deploy to Staging 
