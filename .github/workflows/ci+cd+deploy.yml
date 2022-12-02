@@ -16,7 +16,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -41,7 +41,7 @@ jobs:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
    
-  test:
+  Unit_Tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -52,7 +52,7 @@ jobs:
         if: always()
         with:
          name: BP Calculator - Unit Tests
-         path: "**/unit-test-results.trx"                            
+         path: "**/test-results.trx"                            
          reporter: dotnet-trx
          fail-on-error: true
       - name: NDepend
@@ -62,7 +62,7 @@ jobs:
          license: ${{ secrets.NDependLicense }}
          stopIfQGFailed: true
      
-  e2e_tests:
+  E2E_Tests:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -89,7 +89,7 @@ jobs:
       contents: none
     runs-on: ubuntu-latest
     if: github.event.ref == 'refs/heads/main'
-    needs: [build, test]
+    needs: [Build, Unit_Tests]
     environment:
       name: 'Development'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }} #'https://bpcalc-csd1-dev.azurewebsites.net'
@@ -112,7 +112,7 @@ jobs:
       contents: none
     runs-on: ubuntu-latest
     if: github.event.ref == 'refs/heads/main'
-    needs: [e2e_tests, DeployDev]
+    needs: [E2E_Tests, DeployDev]
     environment:
       name: 'Staging'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }} #https://bpcalc-csd1-staging.azurewebsites.net
