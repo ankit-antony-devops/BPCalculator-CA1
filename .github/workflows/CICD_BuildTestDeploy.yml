@@ -63,8 +63,6 @@ jobs:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
          license: ${{ secrets.NDependLicense }}
          stopIfQGFailed: true
-      - name: Dependency Check
-        uses: dependency-check/Dependency-Check_Action@1.1.0
  
   E2E_Tests:
     name: E2E Tests (Playwright)
