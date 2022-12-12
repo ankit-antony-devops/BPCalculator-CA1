@@ -16,7 +16,7 @@ namespace BPCalculator
     {
         [Display(Name = "Use more salt\n, Drink more water\n, Wear compression stockings\n, Medications")] Low,
         [Display(Name = "Proud to be healthy!")] Ideal,
-        [Display(Name = "Excercise daily\n, Make healthy food choices")] PreHigh,
+        [Display(Name = "Excercise daily*3 times\n, Make healthy food choices")] PreHigh,
         [Display(Name = "Please visit your nearest GP for a body checkup\n Doctor365: 0818000365")] High
     };
     
